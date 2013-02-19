@@ -1,40 +1,41 @@
 body, html, div, p, span, a, h1, h2, h3, h4, h5{
-	margin 				: 0;
-	padding 			: 0;
+	margin: 0;
+	padding: 0;
 }
 
-body, html{	
-	width 				: 100%;
+body, html{
+	width: 100%;
 }
 
 body{
-	background 			: url('../images/bkgd.png') repeat top left;
-	color 				: white;
-	font-family 		: tahoma;
-	font-weight 		: lighter;
-	padding-top 		: 40px;
+	background: url('../images/bkgd.png') repeat top left;
+	color: white;
+	font-family: tahoma;
+	font-weight: lighter;
+	padding-top: 40px;
 }
 
-	body p{
-		font-size 		: 14px;
-	}
-	
-		body p a{
-			font-size	: 16px;
-		}
+body p {
+	font-size: 14px;
+}
+
+body p a {
+	font-size: 16px;
+}
 
 h1 {
-	color 				: #E05E00;	
-	font-style 			: italic;
+	color: #E05E00;
+	font-style: italic;
 }
 
-a{
-	color 				: #E05E00;	
-	text-decoration		: none;
+a {
+	color: #E05E00;
+	text-decoration: none;
 }
 
-a:hover{
-	text-decoration		: underline;
+a:hover {
+	color: #E05E00;
+	text-decoration: underline;
 }
 
 /* general */
@@ -44,49 +45,107 @@ a:hover{
 
 /* Header */
 .brand{
-	color 				: #E05E00 !important;	
-	font-family 		: georgia;
-	font-style 			: italic;
+	color: #E05E00 !important;
+	font-family: georgia;
+	font-style: italic;
 }
 
 /* list stuff */
-#org{
-	background-color 	: white;
-	margin 				: 10px;
-	padding 			: 10px;
+#org {
+	background-color: white;
+	margin: 10px;
+	padding: 10px;
 }
 
-#show-list{
-	cursor 				: pointer;
+#show-list {
+	cursor: pointer;
 }
 
 /* bootstrap overrides */
-.alert-message{
+.alert-message {
 	margin: 2px 0;
 }
 
-.topbar{
-	position 			: absolute;
+.topbar {
+	position: absolute;
 }
 
 /* Custom chart styling */
 .jOrgChart {
-  margin                : 10px;
-  padding               : 20px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.jOrgChart .line,
+.jOrgChart .top {
+	width: 2px;
+	border-color: #456982;
+}
+
+.jOrgChart .down {
+	background-color: #456982;
+}
+
+.jOrgChart .left,
+.jOrgChart .right {
+	border-width: 1px;
+	border-color: #456982;
 }
 
 /* Custom node styling */
 .jOrgChart .node {
-	font-size 			: 14px;
-	background-color 	: #35363B;
-	border-radius 		: 8px;
-	border 				: 5px solid white;
-	color 				: #F38630;
-	-moz-border-radius 	: 8px;
+	width: 160px;
+	height: 34px;
+	background-color: #6fc6ff;
+	background-image: -webkit-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+	background-image:    -moz-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+	background-image:     -ms-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+	background-image:      -o-linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+	background-image:         linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1));
+	border: none;
+	border-radius: .5em;
+	box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.25),
+	            inset 0 2px 0 hsla(0,0%,100%,.1),
+	            inset 0 1.2em 0 hsla(0,0%,100%,.1),
+	            inset 0 -.2em 0 hsla(0,0%,100%,.1),
+	            inset 0 -.25em 0 hsla(0,0%,0%,.5),
+	            0 .25em .25em hsla(0,0%,0%,.1);
+	color: #444;
+	cursor: pointer;
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5;
+	margin: 0 .5em;
+	padding: .5em;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 1px 1px hsla(0,0%,100%,.25);
+	vertical-align: middle;
 }
-	.node p{
-		font-family 	: tahoma;
-		font-size 		: 10px;
-		line-height 	: 11px;
-		padding 		: 2px;
-	}
+
+.node .photo {
+	margin-right: 10px;
+}
+
+.node .profile {
+	overflow: hidden;
+	text-align: left;
+}
+
+.node .name {
+	font-size: 14px;
+	line-height: 16px;
+	white-space: nowrap;
+}
+
+.node .position {
+	font-size: 11px;
+}
+
+.node p{
+	font-size: 11px;
+	line-height: 11px;
+	padding: 2px;
+}
