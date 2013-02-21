@@ -64,6 +64,11 @@
         /* reload the plugin */
         $(opts.chartElement).children().remove();
         $this.jOrgChart(opts);
+
+        /* check passed nodeOnDropped */
+        if ( typeof opts.nodeOnDropped === 'function' ) {
+          opts.nodeOnDropped(event, opts);
+        }
       });
 
       // Drop event handler for nodes
@@ -103,7 +108,8 @@
     dragAndDrop: false,
     nodeOnMouseover: null,
     nodeOnMouseout: null,
-    nodeOnClick: null
+    nodeOnClick: null,
+    nodeOnDropped: null,
   };
 
   function buildNodes($list, $appendTo, opts) {
