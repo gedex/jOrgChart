@@ -99,6 +99,7 @@
     chartElement : 'body',
     depth      : -1,
     chartClass : "jOrgChart",
+    toggleChildNodes: true,
     dragAndDrop: false,
     nodeOnMouseover: null,
     nodeOnMouseout: null,
@@ -176,7 +177,7 @@
     }
 
     // Expand and contract nodes
-    if ($childNodes.length > 0) {
+    if ($childNodes.length > 0 && opts.toggleChildNodes) {
       $nodeDiv.click(function() {
         var $this = $(this);
         var $tr = $this.closest("tr");
