@@ -260,7 +260,6 @@
         var classList = $node.attr('class').split(/\s+/);
         $.each(classList, function(index,item) {
             if (item == 'collapsed') {
-                console.log($node);
                 $nodeRow.nextAll('tr').css('visibility', 'hidden');
                     $nodeRow.removeClass('expanded');
                     $nodeRow.addClass('contracted');
@@ -276,7 +275,6 @@
 
     /* Prevent trees collapsing if a link inside a node is clicked */
     $nodeDiv.children('a').click(function(e){
-        console.log(e);
         e.stopPropagation();
     });
   };
