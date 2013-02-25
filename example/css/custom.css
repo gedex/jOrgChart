@@ -76,6 +76,10 @@ a:hover {
   padding: 20px;
 }
 
+.jOrgChart td {
+	padding: 0 1.5em;
+}
+
 .jOrgChart .line,
 .jOrgChart .top {
 	width: 2px;
@@ -88,7 +92,7 @@ a:hover {
 
 .jOrgChart .left,
 .jOrgChart .right {
-	border-width: 1px;
+	border-width: 2px;
 	border-color: #456982;
 }
 
@@ -117,7 +121,7 @@ a:hover {
 	font-size: 1em;
 	font-weight: bold;
 	line-height: 1.5;
-	margin: 0 .5em;
+	margin: 0;
 	padding: .5em;
 	position: relative;
 	text-decoration: none;
@@ -144,8 +148,60 @@ a:hover {
 	font-size: 11px;
 }
 
+.node .arrow {
+	display: block;
+	position: absolute;
+	background-image: none;
+	background-repeat: no-repeat;
+}
+
+.node .arrow:hover,
+.node .arrow.active {
+	background-image: url(../images/arrows_sprite.png);
+}
+
+.node .arrow-right {
+	width: 11px;
+	height: 42px;
+	background-position: -9px 0;
+	top: 2px;
+	right: -13px;
+}
+
+.node .arrow-left {
+	width: 11px;
+	height: 42px;
+	background-position: -21px 0;
+	top: 2px;
+	left: -13px;
+}
+
+.node .arrow-up {
+	width: 42px;
+	height: 11px;
+	background-position: 0 -46px;
+	top: -13px;
+	left: 65px;
+}
+
+.node .arrow-down {
+	width: 42px;
+	height: 11px;
+	background-position: 0 -63px;
+	bottom: -13px;
+	left: 65px;
+}
+
 .node p{
 	font-size: 11px;
 	line-height: 11px;
 	padding: 2px;
+}
+
+/* bootstrap popover */
+.jOrgChart .node .popover {
+	width:256px;
+	text-align: left;
+	z-index: 99;
+	border-width: 1px;
 }
